@@ -29,7 +29,6 @@ describe("starwars-names", () => {
   describe("random", () => {
     it("should return a random item from the starWars.all", () => {
       let randomItem = starWars.random();
-      console.log(randomItem);
       expect(starWars.all).toContain(randomItem);
     });
 
@@ -39,6 +38,23 @@ describe("starwars-names", () => {
       randomItems.forEach(item => {
         expect(starWars.all).toContain(item);
       });
+    });
+  });
+
+  describe("firstFive", () => {
+    it("should return a 5 names", () => {
+      const result = starWars.firstFive();
+      // console.log(result);
+      expect(Array.isArray(result)).toBe(true);
+      expect(result).toHaveLength(5);
+    });
+  });
+
+  describe("formatfirstFive", () => {
+    it("should return a format first 5 names", () => {
+      const result = starWars.formatfirstFive();
+      console.log(result);
+      expect(result).toMatchSnapshot();
     });
   });
 });

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`starwars-names formatfirstFive should return a format first 5 names 1`] = `
+"These are the items in the lista:
+  - 4-LOM
+  - Aayla Secura
+  - Admiral Ackbar
+  - Admiral Thrawn
+  - Ahsoka Tano"
+`;
