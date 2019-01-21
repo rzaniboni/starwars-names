@@ -1,23 +1,23 @@
-const uniqueRandomArray = require('unique-random-array')
-const startWarsNames = require('./starwars-names.json')
+const uniqueRandomArray = require("unique-random-array");
+const startWarsNames = require("./starwars-names.json");
 
 module.exports = {
   all: startWarsNames,
   random: random
-}
+};
 
 function random(number) {
   if (number === undefined) {
-    return getRandomItem()
+    return getRandomItem();
   } else {
-    const randomItems = []
+    const randomItems = [];
     for (let i = 0; i < number; i++) {
-      randomItems.push(getRandomItem())
+      randomItems.push(getRandomItem());
     }
-    return randomItems
+    return randomItems;
   }
 }
 
-function getRandomItem () {
-  return uniqueRandomArray(startWarsNames)()
+function getRandomItem() {
+  return uniqueRandomArray(startWarsNames)();
 }
